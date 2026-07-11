@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1783752513662,
+      "tag": "0000_demonic_penance",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1783752700000,
+      "tag": "0001_security_boundaries",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1783752997567,
+      "tag": "0002_sturdy_turbo",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1783753171004,
+      "tag": "0003_narrow_ronan",
+      "breakpoints": true
+    }
+  ]
+}

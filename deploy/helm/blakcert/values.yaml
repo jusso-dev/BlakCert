@@ -1,0 +1,36 @@
+image:
+  repository: ghcr.io/example/blakcert
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+workerImage:
+  repository: ghcr.io/example/blakcert-worker
+  tag: "0.1.0"
+replicas:
+  web: 2
+  worker: 2
+  mcp: 2
+service:
+  port: 3000
+ingress:
+  enabled: false
+  className: nginx
+  host: blakcert.example.com
+  tlsSecretName: blakcert-tls
+secretName: blakcert-secrets
+config:
+  BETTER_AUTH_URL: https://blakcert.example.com
+  OBJECT_STORAGE_REGION: auto
+  OBJECT_STORAGE_BUCKET: blakcert
+  LOG_LEVEL: info
+resources:
+  web:
+    requests: { cpu: 250m, memory: 384Mi }
+    limits: { cpu: "2", memory: 1Gi }
+  worker:
+    requests: { cpu: 500m, memory: 512Mi }
+    limits: { cpu: "4", memory: 2Gi }
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
