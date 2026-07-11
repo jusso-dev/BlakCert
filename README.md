@@ -1,7 +1,7 @@
 # BlakCert
 
 <p align="center">
-  <img src="./public/brand/blakcert-logo.png" alt="BlakCert certificate management logo" width="180" height="180" />
+  <img src="./public/brand/blakcert-logo.png" alt="BlakCert certificate management logo" width="320" />
 </p>
 
 [![CI](https://github.com/jusso-dev/BlakCert/actions/workflows/ci.yml/badge.svg)](https://github.com/jusso-dev/BlakCert/actions/workflows/ci.yml)
