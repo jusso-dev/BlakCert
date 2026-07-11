@@ -1,5 +1,9 @@
 # BlakCert
 
+<p align="center">
+  <img src="./public/brand/blakcert-logo.png" alt="BlakCert certificate management logo" width="180" height="180" />
+</p>
+
 [![CI](https://github.com/jusso-dev/BlakCert/actions/workflows/ci.yml/badge.svg)](https://github.com/jusso-dev/BlakCert/actions/workflows/ci.yml)
 
 BlakCert is an agentic-first, API-first, MCP-native enterprise certificate lifecycle management platform. The initial production vertical slice provides secure authentication, organisation isolation, certificate import and parsing, explainable risk, immutable audit events, REST access, and permission-aware MCP tools.
