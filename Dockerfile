@@ -24,7 +24,7 @@ CMD ["npm", "run", "worker"]
 
 FROM node:22-alpine AS runtime
 WORKDIR /app
-ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 PORT=3000
+ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 HOSTNAME=0.0.0.0 PORT=3000
 RUN addgroup --system --gid 1001 blakcert && adduser --system --uid 1001 --ingroup blakcert blakcert
 COPY --from=build --chown=blakcert:blakcert /app/public ./public
 COPY --from=build --chown=blakcert:blakcert /app/.next/standalone ./

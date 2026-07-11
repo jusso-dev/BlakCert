@@ -8,7 +8,7 @@ test("registration, organisation, MFA, import, audit, REST, and passkey challeng
   context,
 }) => {
   const email = `e2e-${Date.now()}@example.test`;
-  const password = "Correct-Horse-Battery-Staple-2026";
+  const password = `E2E-${crypto.randomUUID()}-Aa1!`;
 
   await page.goto("/sign-up");
   await page.getByLabel("Full name").fill("E2E Administrator");
