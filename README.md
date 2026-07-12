@@ -8,6 +8,10 @@
 
 BlakCert is an agentic-first, API-first, MCP-native enterprise certificate lifecycle management platform. The initial production vertical slice provides secure authentication, organisation isolation, certificate import and parsing, explainable risk, immutable audit events, REST access, and permission-aware MCP tools.
 
+## Interface preview
+
+![BlakCert sign-in screen](docs/screenshots/sign-in.png)
+
 ## Quick start
 
 ```bash
