@@ -17,8 +17,9 @@ export function MfaPanel() {
       password: String(formData.get("password")),
     });
     if (result.error) return setError(result.error.message ?? "Could not start TOTP enrolment");
-    setTotpUri(result.data?.totpURI);
-    setRecoveryCodes(result.data?.backupCodes ?? []);
+    if (result.data?.method !== "totp") return setError("Could not start TOTP enrolment");
+    setTotpUri(result.data.totpURI);
+    setRecoveryCodes(result.data.backupCodes);
   }
 
   async function verifyTotp(formData: FormData) {

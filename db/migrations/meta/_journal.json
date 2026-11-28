@@ -29,6 +29,13 @@
       "when": 1783753171004,
       "tag": "0003_narrow_ronan",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795832893212,
+      "tag": "0004_session_impersonated_by",
+      "breakpoints": true
     }
   ]
 }

@@ -95,6 +95,8 @@ export const sessions = pgTable(
     approximateLocation: text("approximate_location"),
     activeOrganisationId: uuid("active_organisation_id"),
     trustedDeviceId: uuid("trusted_device_id"),
+    // Required by the better-auth admin plugin from 1.7 (set while an admin impersonates a user).
+    impersonatedBy: uuid("impersonated_by").references(() => users.id, { onDelete: "set null" }),
     lastSeenAt: timestamp("last_seen_at", { withTimezone: true }).notNull().defaultNow(),
     revokedAt: timestamp("revoked_at", { withTimezone: true }),
     revokedReason: text("revoked_reason"),

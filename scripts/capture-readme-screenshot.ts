@@ -9,7 +9,10 @@ async function main() {
   mkdirSync(dirname(output), { recursive: true });
   const browser = await chromium.launch({ headless: true });
   try {
-    const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
+    const page = await browser.newPage({
+      viewport: { width: 1440, height: 900 },
+      deviceScaleFactor: 1,
+    });
     await page.goto(url, { waitUntil: "networkidle" });
     await page.getByRole("heading", { name: "Sign in to BlakCert" }).waitFor();
     await page.screenshot({ path: output, fullPage: true });
